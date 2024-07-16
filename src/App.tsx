@@ -8,6 +8,9 @@ const App: FC = () => {
   const [todo, setTodoList] = useState([]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.name === "task") {
+      setTask(event.target.value);
+    }
     setTask(event.target.value)
   };
   return (
@@ -15,7 +18,13 @@ const App: FC = () => {
     <div className="header">
       <div className="inputContainer">
       <input type="text" placeholder="Task..." name="task" onChange={handleChange} />
-      <input type="number" placeholder="Deadline(in days)..." />
+      <input 
+      type="number" 
+      placeholder="Deadline(in days)..."
+      name="deadline"
+      onChange={handleChange}
+      />
+
       </div>
       <button>ADD Task</button>
     </div>
@@ -26,6 +35,3 @@ const App: FC = () => {
 
 export default App;
 
-
-
-16min 27 sec
