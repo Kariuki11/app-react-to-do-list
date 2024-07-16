@@ -18,7 +18,8 @@ const App: FC = () => {
   const addTask = (): void => {
     const newTask = {taskName: task, deadline: deadline};
     setTodoList([...todoList, newTask]);
-
+    setTask("");
+    setDeadline(0);
   };
 
 
