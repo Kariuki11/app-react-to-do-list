@@ -1,10 +1,11 @@
 import React, {FC, ChangeEvent, useState } from 'react';
 import './App.css';
+import {ITask} from './interfaces';
 
 const App: FC = () => {
   const [task, setTask] = useState<string>("");
   const [deadline, setDeadline] = useState<number>(0);
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState<ITask[]>([]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     if (event.target.name === "task") {
@@ -15,7 +16,8 @@ const App: FC = () => {
   };
 
   const addTask = (): void => {
-    setTodoList([...todoList, task])
+    const newTask = {taskName: task, deadline: deadline};
+    setTodoList([...todoList, newTask]);
   };
 
 
