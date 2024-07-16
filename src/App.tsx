@@ -2,7 +2,6 @@ import React, {FC, ChangeEvent, useState } from 'react';
 import './App.css';
 
 const App: FC = () => {
-
   const [task, setTask] = useState<string>("");
   const [deadline, setDeadline] = useState<number>(0);
   const [todo, setTodoList] = useState([]);
