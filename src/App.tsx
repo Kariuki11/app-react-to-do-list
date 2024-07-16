@@ -6,14 +6,16 @@ const App: FC = () => {
   const [deadline, setDeadline] = useState<number>(0);
   const [todo, setTodoList] = useState([]);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     if (event.target.name === "task") {
       setTask(event.target.value);
     }else {
       setDeadline(Number(event.target.value));
     }
-    setTask(event.target.value)
   };
+
+
+
   return (
   <div className="App">
     <div className="header">
