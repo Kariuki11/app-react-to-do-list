@@ -5,7 +5,7 @@ interface Props {
     task: ITask;
 }
 
-const TodoTask = ({}: Props) => {
+const TodoTask = ({ task }: Props) => {
     return <div>task</div>
 }
 
