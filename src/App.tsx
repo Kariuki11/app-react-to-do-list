@@ -54,5 +54,3 @@ const App: FC = () => {
 
 export default App;
 
-
-27 minutes
